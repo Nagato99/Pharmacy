@@ -111,12 +111,20 @@ namespace Pharmacy
 
         }
 
+        private void DeleteMedicine_Click(object sender, EventArgs e)
+        {
+            if (this.BillGridView.SelectedRows.Count > 0)
+            {
+                BillGridView.Rows.RemoveAt(this.BillGridView.SelectedRows[0].Index);
+            }
+        }
+
         private void AddBillbtn_Click(object sender, EventArgs e)
         {
             int n = 0;
-            if (QtyBill.Text == "" || Convert.ToInt32(QtyBill.Text) > x)
+            if (QtyBill.Text == "" || Convert.ToInt32(QtyBill.Text) > x || Convert.ToInt32(QtyBill.Text) <=0)
             {
-                MessageBox.Show("Not Enough Stock! Please Check Available Stock Again.");
+                MessageBox.Show("Invalid value! Please verify the stock.");
             }
             else
             {

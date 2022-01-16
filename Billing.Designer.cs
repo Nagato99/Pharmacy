@@ -53,11 +53,13 @@ namespace Pharmacy
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.DeleteMedicine = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.BillGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // BillGridView
             // 
+            this.BillGridView.AllowUserToAddRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.BillGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.BillGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -323,7 +325,7 @@ namespace Pharmacy
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(177, 424);
+            this.guna2Button1.Location = new System.Drawing.Point(299, 410);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
             this.guna2Button1.Size = new System.Drawing.Size(93, 45);
@@ -331,11 +333,29 @@ namespace Pharmacy
             this.guna2Button1.Text = "Home";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
+            // DeleteMedicine
+            // 
+            this.DeleteMedicine.BorderRadius = 15;
+            this.DeleteMedicine.CheckedState.Parent = this.DeleteMedicine;
+            this.DeleteMedicine.CustomImages.Parent = this.DeleteMedicine;
+            this.DeleteMedicine.FillColor = System.Drawing.Color.Green;
+            this.DeleteMedicine.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteMedicine.ForeColor = System.Drawing.Color.White;
+            this.DeleteMedicine.HoverState.Parent = this.DeleteMedicine;
+            this.DeleteMedicine.Location = new System.Drawing.Point(69, 410);
+            this.DeleteMedicine.Name = "DeleteMedicine";
+            this.DeleteMedicine.ShadowDecoration.Parent = this.DeleteMedicine;
+            this.DeleteMedicine.Size = new System.Drawing.Size(93, 45);
+            this.DeleteMedicine.TabIndex = 31;
+            this.DeleteMedicine.Text = "Delete";
+            this.DeleteMedicine.Click += new System.EventHandler(this.DeleteMedicine_Click);
+            // 
             // Billing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 612);
+            this.Controls.Add(this.DeleteMedicine);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.Printbtn);
             this.Controls.Add(this.totalamount);
@@ -374,5 +394,6 @@ namespace Pharmacy
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button DeleteMedicine;
     }
 }
